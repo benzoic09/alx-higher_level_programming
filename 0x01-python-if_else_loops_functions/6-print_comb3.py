@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 for tens_digit in range(10):
-    for 1digit in range(tens_digit + 1, 10):
-        if tens_digit == 8 and 1digit == 9:
-            print("{:d}{:d}".format(tens_digit, 1digit))
+    for ones_digit in range(tens_digit + 1, 10):
+        if tens_digit == 8 and ones_digit == 9:
+            print("{:d}{:d}".format(tens_digit, ones_digit))
         else:
-            print("{:d}{:d}, ".format(tens_digit, 1digit), end='')
+            print("{:d}{:d}, ".format(tens_digit, ones_digit), end='')
 
