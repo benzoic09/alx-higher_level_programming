@@ -8,4 +8,4 @@ def uniq_add(my_list=[]):
             result += num
             unique_set.add(num)
 
-            return (result)
+    return (result)
