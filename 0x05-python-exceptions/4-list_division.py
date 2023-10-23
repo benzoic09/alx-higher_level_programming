@@ -17,7 +17,7 @@ def list_division(my_list_1, my_list_2, list_length):
         finally:
             if switch:
                 switch = 0
-                store.append(0)
+                result.append(0)
             else:
-                store.append(x)
+                result.append(x)
     return result
