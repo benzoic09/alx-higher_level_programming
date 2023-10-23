@@ -20,4 +20,4 @@ def list_division(my_list_1, my_list_2, list_length):
                 store.append(0)
             else:
                 store.append(x)
-    return store
+    return result
