@@ -5,7 +5,7 @@ Square module
 
 
 class Square:
-    """ class square"""
+    """class square"""
     def __init__(self, size=0):
         self.__size = size
 
@@ -17,7 +17,7 @@ class Square:
     def size(self, value):
         if type(value) != int:
             raise TypeError("size must be an integer")
-        if value < 0:
+        if size < 0:
             raise ValueError("size must be >= 0")
 
     def area(self):
