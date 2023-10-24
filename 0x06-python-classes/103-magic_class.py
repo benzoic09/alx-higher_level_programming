@@ -4,7 +4,7 @@
 import math
 
 
-class MagicClass():
+class MagicClass:
     """magiclass object and method ."""
 
     def _init_(self, radius=0):
