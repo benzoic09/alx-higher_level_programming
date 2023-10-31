@@ -12,38 +12,38 @@ Now use it:
     	>>> add_integer("a", 1)
 	Traceback (most recent call last):
 	    ...
-	TypeError: a must be an integer
+	TypeError: a must be an integer or b must be an integer
 
 	>>> add_integer(1, "a")
 	Traceback (most recent call last):
 	    ...
-	TypeError: b must be an integer
+	TypeError: a must be an integer or b must be an integer
 	
 	>>> add_integer("aa", "bb")
 	Traceback (most recent call last):
 	    ...
-	TypeError: a must be an integer
+	TypeError: a must be an integer or b must be an integer
 
 	>> add_integer(3, 5)
     	8
 
 	 >>> add_integer(3, 4.5)
-   	 7.5
+   	 7
 
    	 >>> add_integer(5, -2)
    	 3
 
-  	  >>> add_integer(-5, 2)
+  	 >>> add_integer(-5, 2)
    	 -3
 
     	>>> add_integer(-2.1, -0.1)
-	-2.2
+	-2
 
 	>>> add_integer(10.1, -2.9)
-	7.3
+	8
 
 	>>> add_integer(True, 4)
-	4
+	5
 
 	>>> add_integer(4, False)
 	4
@@ -51,5 +51,5 @@ Now use it:
 	>>> add_integer(None, 4)
 	Traceback (most recent call last):
 	    ...
-	TypeError: a must be an integer
+	TypeError: a must be an integer or b must be an integer
 
