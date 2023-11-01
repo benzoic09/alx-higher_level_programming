@@ -5,6 +5,7 @@ matrix divide
 
 
 def matrix_divided(matrix, div):
+    """matrix_Divide"""
     if not all(
        isinstance(row, list) and all(isinstance(x, (int, float))for x in row)
        for row in matrix):
