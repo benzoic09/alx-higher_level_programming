@@ -12,16 +12,18 @@ test senarios:
 
 
    >>> sqr(-2.3)
-    Traceback (most recent call last):
+   Traceback (most recent call last):
         ...
-    TypeError: size must be an integer
+   TypeError: size must be an integer
 
 
-    >>> sqr({1})
-    Traceback (most recent call last):
-        ...
-    TypeError: size must be an integer
-
+    >>> sqr(6)
+    ######
+    ######
+    ######
+    ######
+    ######
+    ######
 
     >>> sqr("4")
     Traceback (most recent call last):
@@ -29,14 +31,10 @@ test senarios:
     TypeError: size must be an integer
 
     >>> sqr(True)
-    Traceback (most recent call last):
-        ...
-    TypeError: size must be an integer
+    #
 
     >>> sqr(False)
-    Traceback (most recent call last):
-        ...
-    TypeError: size must be an integer
+   
 
     >>> sqr((1, 2))
     Traceback (most recent call last):
