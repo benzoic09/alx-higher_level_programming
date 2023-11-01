@@ -1,13 +1,15 @@
 #!/usr/bin/python3
 """
-add 2 numbers
+matrix divide
 """
 
 
 def matrix_divided(matrix, div):
-    if not all(isinstance(row, list) and all(isinstance(x, (int, float))
-        for x in row) for row in matrix):
-        raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
+    if not all(
+       isinstance(row, list) and all(isinstance(x, (int, float))for x in row)
+       for row in matrix):
+        raise TypeError(
+                "matrix must be a matrix (list of lists) of integers/floats")
 
     if len(set(len(row) for row in matrix)) != 1:
         raise TypeError("Each row of the matrix must have the same size")
@@ -20,4 +22,4 @@ def matrix_divided(matrix, div):
 
     result_matrix = [[round(x / div, 2) for x in row] for row in matrix]
 
-     return result_matrix
+    return result_matrix
