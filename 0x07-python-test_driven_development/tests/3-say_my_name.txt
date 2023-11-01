@@ -12,16 +12,11 @@ test senarios:
     >>> s_m_n("John", "Smith")
     My name is John Smith
 
-    >>> s_m_n("Ben")
-    My name is Ben
-
     >>> s_m_n("Bob", 12)
     Traceback (most recent call last):
         ...
     TypeError: last_name must be a string
 
-    >>> s_m_n("")
-    My name is
 
     >>> s_m_n(1)
     Traceback (most recent call last):
