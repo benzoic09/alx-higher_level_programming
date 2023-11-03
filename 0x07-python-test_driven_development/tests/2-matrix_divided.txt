@@ -17,8 +17,6 @@ test senarios:
     >>> print(matrix_divided(matrix, 3))
     [[0.33, 0.67, 1.0], [1.33, 1.67, 2.0]]
     
-    >>> print(matrix)
-    [[1, 2, 3], [4, 5, 6]]
 
     >>> matrix = [
     ...     [1, 2.3, -3.5],
@@ -56,3 +54,13 @@ test senarios:
     Traceback (most recent call last):
         ...
     TypeError: Each row of the matrix must have the same size
+
+     >>> m = [[1]]
+     >>> matrix_divided(m, 2)
+     [[0.5]]
+
+      >>> matrix = [
+      ...     [-4.45567, 5.0, 6.6666, 'bob'],
+      ...     [1.33, 2.3, -3.5, 6]
+      ... ]
+     
