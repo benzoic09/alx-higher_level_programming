@@ -12,17 +12,17 @@ Now use it:
     	>>> add_integer("a", 1)
 	Traceback (most recent call last):
 	    ...
-	TypeError: a must be an integer or b must be an integer
+	TypeError: a must be an integer
 
 	>>> add_integer(1, "a")
 	Traceback (most recent call last):
 	    ...
-	TypeError: a must be an integer or b must be an integer
+	TypeError: b must be an integer
 	
 	>>> add_integer("aa", "bb")
 	Traceback (most recent call last):
 	    ...
-	TypeError: a must be an integer or b must be an integer
+	TypeError: a must be an integer
 
 	>> add_integer(3, 5)
     	8
@@ -51,5 +51,5 @@ Now use it:
 	>>> add_integer(None, 4)
 	Traceback (most recent call last):
 	    ...
-	TypeError: a must be an integer or b must be an integer
+	TypeError: a must be an integer
 
