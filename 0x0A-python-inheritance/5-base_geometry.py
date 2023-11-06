@@ -4,6 +4,6 @@ empty class BaseGeometry.
 """
 
 
-class BaseGeometry(self):
+class BaseGeometry:
     """ empty class"""
     pass
