@@ -31,3 +31,20 @@ True
 Traceback (most recent call last):
     ...
 TypeError: my_int must be an integer
+
+
+>>> bg = BaseG()
+>>> type(bg)
+<class '7-base_geometry.BaseGeometry'>
+
+
+
+This class should define 2 functions
+
+``area``
+>>> 'area' in dir(BaseG)
+True
+
+``integer_validator``
+>>> 'integer_validator' in dir(BaseG)
+True
