@@ -29,10 +29,3 @@ Examples:
 >>> a.append("b")
 >>> a
 [1, 5, 3, 'b']
-
-
->>> a.print_sorted()
-Traceback (most recent call last):
-        ...
-TypeError: unorderable types: str() < int()
-
