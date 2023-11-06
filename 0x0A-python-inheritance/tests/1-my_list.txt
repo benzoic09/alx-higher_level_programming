@@ -5,6 +5,8 @@ The ``Print Sorted List`` module
 Using ``MyList``
 ----------------
 
+ >>> MyList = __import__("1-my_list").MyList
+
 Examples:
 
 >>> a = MyList()
@@ -15,7 +17,7 @@ Examples:
 >>> a
 [1]
 
-
+>>> a = MyList()
 >>> a.append(5)
 >>> a.append(3)
 >>> a
