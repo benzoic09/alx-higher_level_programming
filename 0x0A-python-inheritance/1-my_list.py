@@ -4,7 +4,8 @@ class mylist inherits from mylist
 """
 
 
-def Mylist(list):
+class MyList(list):
+    """ mylist class"""
     def print_sorted(self):
         sorted_list = sorted(self)
-        print(sorted)
+        print(sorted_list)
