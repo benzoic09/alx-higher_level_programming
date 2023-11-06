@@ -1,4 +1,4 @@
-#!/usr/python3
+#!/usr/bin/python3
 """
 class mylist inherits from mylist
 """
