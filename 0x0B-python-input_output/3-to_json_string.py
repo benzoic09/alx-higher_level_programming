@@ -2,10 +2,7 @@
 """
  function that returns the JSON representation of an object (string):
 """
-
-
 import json
-""" jason"""
 
 
 def to_json_string(my_obj):
