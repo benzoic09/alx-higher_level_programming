@@ -12,5 +12,5 @@ class student:
         self.age = age
 
     def to_json(self):
-        """json file"""
-        return self.__dict__
+        return {key: value for (key, value) in self.__dict__.items()
+                if key in list(self.__dict__.keys())}
