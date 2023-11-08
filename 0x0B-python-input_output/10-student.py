@@ -14,5 +14,7 @@ class Studenit:
     def to_json(self, attrs=None):
         if attrs is None:
             return self.__dict__
-        return {key: value for (key, value) in self.__dict__.items()
-                if key in attrs}
+        if not isinstance(atts, list) or not all(isinstance(attr, str) 
+                for attr in attrs):
+            return self.__dict__
+        return {attr: getattr(self, attr, None) for attr in attrs}
