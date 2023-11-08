@@ -17,4 +17,5 @@ class Student:
         if not isinstance(attrs, list) or \
                 not all(isinstance(attr, str)for attr in attrs):
             return self.__dict__
-        return {attr: getattr(self, attr, None) for attr in attrs}
+        return {attr: getattr(self, attr, None) for attr in attrs
+                if hasattr(self, attr)}
