@@ -37,6 +37,7 @@ class Rectangle(Base):
 
         @property
         def x(self):
+            """Set the x-coordinate of the rectangle."""
             return self.__x
 
         @x.setter
@@ -46,6 +47,7 @@ class Rectangle(Base):
 
         @property
         def y(self):
+            """Set the y-coordinate of the rectangle."""
             return self.__y
 
         @y.setter
