@@ -25,6 +25,7 @@ class Rectangle(Base):
     def width(self, value):
         """Set the width of the rectangle."""
         self.validate_integer("width", value)
+        self.validate_positive("width", value)
         self.__width = value
 
     @property
@@ -36,6 +37,7 @@ class Rectangle(Base):
     def height(self, value):
         """Set the height of the rectangle."""
         self.validate_integer("height", value)
+        self.validate_positive("height", value)
         self.__height = value
 
     @property
@@ -47,6 +49,7 @@ class Rectangle(Base):
     def x(self, value):
         """Set the x-coordinate of the rectangle."""
         self.validate_integer("x", value)
+        self.validate_non_negative("x", value)
         self.__x = value
 
     @property
@@ -58,11 +61,20 @@ class Rectangle(Base):
     def y(self, value):
         """Set the y-coordinate of the rectangle."""
         self.validate_integer("y", value)
+        self.validate_non_negative("y", value)
         self.__y = value
 
     def validate_integer(self, name, value):
         """Validate that a value is a positive integer."""
         if not isinstance(value, int):
             raise TypeError(f"{name} must be an integer")
+
+    def validate_positive(self, name, value):
+        """Validate that a value is positive (> 0)."""
+         if value <= 0:
+             raise ValueError(f"{name} must be > 0")
+
+    def validate_non_negative(self, name, value):
+        """Validate that a value is non-negative (>= 0)."""
         if value < 0:
             raise ValueError(f"{name} must be >= 0")
