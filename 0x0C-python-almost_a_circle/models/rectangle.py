@@ -60,11 +60,9 @@ class Rectangle(Base):
             self.integer_validator("y", value)
             self.__y = value
 
-        def validate_integer(self, name, value, eq=True):
-            '''Method for validating the value.'''
-            if type(value) != int:
-                raise TypeError("{} must be an integer".format(name))
-            if eq and value < 0:
-                raise ValueError("{} must be >= 0".format(name))
-            elif not eq and value <= 0:
-                raise ValueError("{} must be > 0".format(name))
+        def validate_integer(self, name, value):
+            """Validate that a value is a positive integer."""
+            if not isinstance(value, int):
+                raise TypeError(f"{name} must be an integer")
+            if value < 0:
+                raise ValueError(f"{name} must be >= 0")
