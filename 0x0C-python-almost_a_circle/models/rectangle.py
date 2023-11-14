@@ -7,6 +7,7 @@ from models.base import Base
 
 class Rectangle(Base):
     """Class representing a rectangle."""
+
     def __init__(self, width, height, x=0, y=0, id=None):
         """constructor"""
         super().__init__(id)
@@ -28,7 +29,6 @@ class Rectangle(Base):
 
         @property
         def height(self):
-            """ height value"""
             """Get the height of the rectangle."""
             return self.__height
 
@@ -59,3 +59,12 @@ class Rectangle(Base):
             """ value assignment"""
             self.integer_validator("y", value)
             self.__y = value
+
+        def validate_integer(self, name, value, eq=True):
+            '''Method for validating the value.'''
+            if type(value) != int:
+                raise TypeError("{} must be an integer".format(name))
+            if eq and value < 0:
+                raise ValueError("{} must be >= 0".format(name))
+            elif not eq and value <= 0:
+                raise ValueError("{} must be > 0".format(name))
