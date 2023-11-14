@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Class Rectangle
+class rectangle
 """
 from models.base import Base
 
@@ -9,7 +9,7 @@ class Rectangle(Base):
     """Class representing a rectangle."""
 
     def __init__(self, width, height, x=0, y=0, id=None):
-        """Constructor."""
+        """constructor"""
         super().__init__(id)
         self.width = width
         self.height = height
@@ -18,14 +18,14 @@ class Rectangle(Base):
 
     @property
     def width(self):
-        """Get the width of the rectangle."""
+        """Set the width of the rectangle."""
         return self.__width
 
     @width.setter
     def width(self, value):
-        """Set the width of the rectangle."""
-        self.validate_integer("width", value)
-        self.__width = value
+        """ width value"""
+        self.integer_validator("width", value)
+        self.__height = value
 
     @property
     def height(self):
@@ -35,29 +35,29 @@ class Rectangle(Base):
     @height.setter
     def height(self, value):
         """Set the height of the rectangle."""
-        self.validate_integer("height", value)
+        self.integer_validator("height", value)
         self.__height = value
 
     @property
     def x(self):
-        """Get the x-coordinate of the rectangle."""
+        """Set the x-coordinate of the rectangle."""
         return self.__x
 
     @x.setter
     def x(self, value):
-        """Set the x-coordinate of the rectangle."""
-        self.validate_integer("x", value)
+        """ value assignment"""
+        self.integer_validator("x", value)
         self.__x = value
 
     @property
     def y(self):
-        """Get the y-coordinate of the rectangle."""
+        """Set the y-coordinate of the rectangle."""
         return self.__y
 
     @y.setter
     def y(self, value):
-        """Set the y-coordinate of the rectangle."""
-        self.validate_integer("y", value)
+        """ value assignment"""
+        self.integer_validator("y", value)
         self.__y = value
 
     def validate_integer(self, name, value):
