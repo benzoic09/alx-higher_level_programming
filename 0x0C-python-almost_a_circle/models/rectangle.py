@@ -100,8 +100,8 @@ class Rectangle(Base):
         """Update attributes with arguments."""
         attr_names = ["id", "width", "height", "x", "y"]
         if args:
-             for i in range(len(args)):
-                 setattr(self, attr_names[i], args[i])
+            for i in range(len(args)):
+                setattr(self, attr_names[i], args[i])
         elif kwargs:
             for key, value in kwargs.items():
                 if key in attr_names:
