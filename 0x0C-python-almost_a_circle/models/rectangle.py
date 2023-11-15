@@ -95,7 +95,6 @@ class Rectangle(Base):
         return '[{}] ({}) {}/{} - {}/{}'.\
             format(type(self).__name__, self.id, self.x, self.y, self.width,
                    self.height)
-    
 
     def update(self, *args):
         """Update attributes with arguments cf."""
