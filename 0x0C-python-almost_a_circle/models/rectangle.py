@@ -98,7 +98,7 @@ class Rectangle(Base):
     
 
     def update(self, *args):
-        """Update attributes with arguments."""
+        """Update attributes with arguments cf."""
         if args:
             attributes = ["id", "width", "height", "x", "y"]
             for i, value in enumerate(args):
