@@ -4,4 +4,4 @@ FROM cities
 WHERE state_id = (
 	SELECT ID 
 	FROM states
-	WHERE name = California);
+	WHERE name = 'California');
