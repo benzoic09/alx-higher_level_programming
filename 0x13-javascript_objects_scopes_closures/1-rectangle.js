@@ -1,5 +1,5 @@
 #!/usr/bin/node
-class Rectangle {
+module.exports = class Rectangle {
   consructor (w, h) {
     this.width = w;
     this.height = h;
