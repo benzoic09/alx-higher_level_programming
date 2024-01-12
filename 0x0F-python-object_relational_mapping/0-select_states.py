@@ -2,7 +2,6 @@
 """ Python scripte to list states from MySQL"""
 
 
-
 import sys
 import MySQLdb
 
