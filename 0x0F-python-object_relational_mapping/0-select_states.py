@@ -18,10 +18,10 @@ if __name__ == "__main__":
 
     cur = db.cursor()
 
-    cur.execute("SELECT id, name FROM states ORDER BY id ASC")
-    states = cur.fetchall()
+    cur.execute("SELECT id, name FROM states")
+   
 
-    for state in states:
+    for state in cur.fetchall():
         print(state)
 
     cur.close()
