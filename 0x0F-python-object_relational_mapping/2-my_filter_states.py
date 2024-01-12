@@ -8,8 +8,8 @@ import MySQLdb
 
 if __name__ == "__main__":
     if len(sys.argv) != 5:
-        print("Usage: {} <username> <password> <db_name> <
-                state_name>".format(sys.argv[0]))
+        print("Usage: {} <username> <password> <db_name> <state_name>".format(
+            sys.argv[0]))
         sys.exit(1)
 
     username, password, db_name, state_name = sys.argv[1:5]
