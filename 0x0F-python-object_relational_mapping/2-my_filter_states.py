@@ -15,14 +15,14 @@ if __name__ == "__main__":
     username, password, db_name, state_name = sys.argv[1:5]
 
     db = MySQLdb.connect(user=username,
-                        passwd=password,
-                        db=db_name,
-                        host='localhost',
-                        port=3306)
+                         passwd=password,
+                         db=db_name,
+                         host='localhost',
+                         port=3306)
 
     cur = db.cursor()
     query = "SELECT * FROM states WHERE name LIKE BINARY '{}' ORDER BY\
-    id ASC".format(state_name)
+            id ASC".format(state_name)
     cur.execute(query)
 
     results = cur.fetchall()
