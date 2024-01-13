@@ -6,8 +6,8 @@ in the states table based on a search argument
 import sys
 import MySQLdb
 
-if __name__ ==  "__main__":
-    if len(sys.argv) != 5:
+if __name__ == "__main__":
+    if len(sysrgv) != 5:
         print("usage: {} <username> <password> <db_name> <state_name>".format(
             sys.argv[0]))
         sys.exit(1)
@@ -29,7 +29,6 @@ if __name__ ==  "__main__":
 
     for row in results:
         print(row)
-
 
     cur.close()
     db.close()
