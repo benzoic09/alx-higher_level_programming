@@ -12,18 +12,19 @@ if __name__ == "__main__":
 
     username, password, db_name = sys.argv[1:4]
 
-    db = MySQLdb.connect(user=username,
-                             passwd=password,
-                             db=db_name,
-                             host='localhost',
-                             port=3306)
+    db = MySQLdb.connect(
+            user=username,
+            passwd=password,
+            db=db_name,
+            host='localhost',
+            port=3306)
 
     cur = db.cursor()
     query = "SELECT cities.id, cities.name, states.name FROM cities\
     JOIN states ON cities.state_id = states.id ORDER by cities.id"
     cur.execute(query)
-    results =  cur.fetchall()
-        
+    results = cur.fetchall()
+
     for rows in results:
         print(rows)
 
