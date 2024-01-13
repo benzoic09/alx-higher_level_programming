@@ -22,15 +22,14 @@ if __name__ == "__main__":
                          port=3306)
 
     cur = db.cursor()
-    query = ("SELECT cities.id, cities.name, states.name FROM cities\
-             JOIN states ON cities.state_id = states.id\
-             WHERE states.name LIKE %s ORDER BY cities.id")
+    query = ("SELECT cities.name FROM states INNER JOIN cities\
+             ON states.id = cities.state_id WHERE states.name=%s\
+             ORDER BY cities.id ASC")
 
     cur.execute(query, (state_name,))
     results = cur.fetchall()
 
-    for row in results:
-        print(row)
+    print(", ".join(str(city[0]) for city in results))
 
     cur.close()
     db.close()
