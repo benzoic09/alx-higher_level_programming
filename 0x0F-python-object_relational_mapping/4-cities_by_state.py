@@ -12,25 +12,20 @@ if __name__ == "__main__":
 
     username, password, db_name = sys.argv[1:4]
 
-    try:
-        db = MySQLdb.connect(user=username,
+    db = MySQLdb.connect(user=username,
                              passwd=password,
                              db=db_name,
                              host='localhost',
                              port=3306)
 
-        cur = db.cursor()
-        query = "SELECT * FROM cities ORDER BY id ASC"
-        cur.execute(query)
-        results =  cur.fetchall()
-        for rows in results:
-            print(rows)
-
-    except MySQLdb.Error as e:
-        print("MYSQL Error: {}".format(e))
-        sys.exit(1)
-
-    finally:
-        if db:
-            db.close()
+    cur = db.cursor()
+    query = "SELECT cities.id, cities.name, states.name FROM cities\
+    JOIN states ON cities.state_id = states.id ORDER by cities.id"
+    cur.execute(query)
+    results =  cur.fetchall()
         
+    for rows in results:
+        print(rows)
+
+    cur.close()
+    db.close()
