@@ -7,7 +7,7 @@ import sys
 import MySQLdb
 
 if __name__ == "__main__":
-    if len(sysrgv) != 5:
+    if len(sys.argv) != 5:
         print("usage: {} <username> <password> <db_name> <state_name>".format(
             sys.argv[0]))
         sys.exit(1)
