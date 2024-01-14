@@ -11,13 +11,15 @@ from model_state import Base, State
 
 if __name__ == "__main__":
     if len(sys.argv) != 5:
-        print("Usage: {} <username> <password> <db_name> <state_name>".format(sys.argv[0]))
+        print("Usage: {} <username> <password> <db_name> <state_name>".format(
+            sys.argv[0]))
         sys.exit(1)
 
     username, password, db_name, state_name = sys.argv[1:5]
 
     engine = create_engine('mysql+mysqldb://{}:{}@localhost:3306/{}'.
-                           format(username, password, db_name), pool_pre_ping=True)
+                           format(username, password, db_name),
+                           pool_pre_ping=True)
 
     Session = sessionmaker(bind=engine)
 
