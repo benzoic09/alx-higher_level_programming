@@ -22,4 +22,3 @@ request.get(apiUrl, function (err, response, body) {
 
   console.log(completedTasksByUser);
 });
-
