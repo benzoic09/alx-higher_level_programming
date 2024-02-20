@@ -13,10 +13,6 @@ request.get(url, function (err, response, body) {
   }
 
   fs.writeFile(filePath, body, 'utf8', function (err) {
-    if (err) {
-      console.error(`Failed to write data to ${filePath}: ${err}`);
-      return;
-    }
-    console.log(`Data successfully written to ${filePath}`);
+    console.log(`${filePath}`);
   });
 });
